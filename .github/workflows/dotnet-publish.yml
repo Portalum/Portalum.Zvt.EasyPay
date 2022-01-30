@@ -1,0 +1,43 @@
+name: .NET Portalum.Zvt.EasyPay
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build-windows:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET 6.0
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      working-directory: ./src
+      run: dotnet restore
+    - name: Build
+      working-directory: ./src
+      run: dotnet build --configuration Release --no-restore /p:NoWarn=1591
+    - name: Build project
+      run: |
+        dotnet publish ./src/Portalum.Zvt.EasyPay/Portalum.Zvt.EasyPay.csproj --configuration Release --self-contained false --runtime win-x64 -p:PublishReadyToRun=true -p:PublishSingleFile=true --output ./publish/temp
+    - uses: vimtor/action-zip@v1
+      with:
+        files: ./publish/temp
+        dest: ./publish/Portalum.Zvt.EasyPay.zip
+    - name: Get the version
+      id: get_version
+      run: echo ::set-output name=tag::${GITHUB_REF/refs\/tags\//}
+      shell: bash
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_name: Portalum/Portalum.Zvt.EasyPay
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./publish/Portalum.Zvt.EasyPay.zip
+        tag: ${{ steps.get_version.outputs.tag }}
+        overwrite: true
