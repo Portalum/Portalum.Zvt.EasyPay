@@ -8,6 +8,13 @@ If you are looking for a simple way to automatically transfer the amount to be p
 Portalum.Zvt.EasyPay.exe --amount 1.23
 ```
 
+## Download
+
+**To use the tool, the following steps must be performed**
+
+- Install [.NET Desktop Runtime 6.x](https://dotnet.microsoft.com/download/dotnet/6.0)
+- Download and extract the EasyPay ([download](https://github.com/Portalum/Portalum.Zvt.EasyPay/releases/latest/download/Portalum.Zvt.EasyPay.zip))
+
 ## Configuration
 
 The configuration of the payment terminal `IpAddress` and the `Port` must be set in the `appsettings.json`.
