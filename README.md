@@ -1,6 +1,6 @@
 # Portalum.Zvt.EasyPay
 
-If you are looking for a simple way to automatically transfer the amount to be paid to your payment terminal, then you have come to the right place. EasyPay allows you to start a payment at the payment terminal with the passing of the amount.<br>
+If you are looking for a simple way to automatically transfer the amount to be paid to your payment terminal, then you have come to the right place. EasyPay allows you to start a payment at the payment terminal with the passing of the amount. It is important that your payment terminal supports the ZVT protocol.
 
 ![Portalum.Zvt.EasyPay](/doc/EasyPay.png)
 
