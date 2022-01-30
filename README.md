@@ -1,7 +1,6 @@
 # Portalum.Zvt.EasyPay
 
-EasyPay allows you to start a payment at the payment terminal with the passing of the amount.<br>
-A log file is automatically created with all important information about the payment process `default-yyyyMMdd.log`.
+If you are looking for a simple way to automatically transfer the amount to be paid to your payment terminal, then you have come to the right place. EasyPay allows you to start a payment at the payment terminal with the passing of the amount.<br>
 
 ![Portalum.Zvt.EasyPay](/doc/EasyPay.png)
 
@@ -29,6 +28,10 @@ ReturnCode | Status | Description |
 -2 | Error | Command line parameter invalid |
 -3 | Error | Configuration file not available |
 -4 | Error | Cannot connect |
+
+## Troubleshooting
+A log file is automatically created with all important information about the payment process.<br>
+You find all log lines in the `default-yyyyMMdd.log` file.
 
 ## Examples
 
