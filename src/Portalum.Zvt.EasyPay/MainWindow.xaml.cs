@@ -34,6 +34,11 @@ namespace Portalum.Zvt.EasyPay
             _ = Task.Run(async () => await this.StartPaymentAsync(amount));
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Shutdown(-5);
+        }
+
         private void UpdateStatus(string status, StatusType statusType)
         {
             this.LabelStatus.Dispatcher.Invoke(() =>
@@ -122,5 +127,6 @@ namespace Portalum.Zvt.EasyPay
         {
             this.UpdateStatus(status, StatusType.Information);
         }
+
     }
 }

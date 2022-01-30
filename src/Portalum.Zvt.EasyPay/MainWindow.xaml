@@ -11,7 +11,9 @@
         WindowStartupLocation="CenterScreen"
         Background="{StaticResource SecondaryColor}"
         Template="{StaticResource WindowWithColoredTitleBarNoResize}"
-        Topmost="True" ResizeMode="NoResize">
+        Topmost="True"
+        ResizeMode="NoResize" Closing="Window_Closing"
+        >
 
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0 64 0 0" NonClientFrameEdges="Left,Bottom,Right" />
