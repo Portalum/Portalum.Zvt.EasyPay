@@ -35,6 +35,7 @@ ReturnCode | Status | Description |
 -2 | Error | Command line parameter invalid |
 -3 | Error | Configuration file not available |
 -4 | Error | Cannot connect |
+-5 | Error | Application close by user |
 
 ## Troubleshooting
 A log file is automatically created with all important information about the payment process.<br>
