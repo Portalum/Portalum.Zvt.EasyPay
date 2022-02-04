@@ -8,7 +8,7 @@ If you are looking for a simple way to automatically transfer the amount to be p
 Portalum.Zvt.EasyPay.exe --amount 1.23
 ```
 
-## Download
+## Installing and running EasyPay
 
 **To use the tool, the following steps must be performed**
 
