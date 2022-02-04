@@ -45,7 +45,7 @@ You find all log lines in the `default-yyyyMMdd.log` file.
 
 ### Start payment
 
-**java**
+#### java
 ```java
 var processBuilder = new ProcessBuilder();
 processBuilder.command("Portalum.Zvt.EasyPay.exe", "--amount", "1.23");
@@ -53,13 +53,13 @@ var process = processBuilder.start();
 var returnCode = process.waitFor();
 ```
 
-**powershell**
+#### powershell
 ```ps
 $process = Start-Process Portalum.Zvt.EasyPay.exe -WindowStyle Hidden -ArgumentList "--amount 1.23" -PassThru -Wait
 $process.ExitCode
 ```
 
-**windows cmd**
+#### windows cmd
 ```cmd
 start /w Portalum.Zvt.EasyPay.exe --amount 1.23
 echo %errorlevel%
